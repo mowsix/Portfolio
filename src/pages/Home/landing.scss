@@ -1,32 +1,50 @@
 .landing__bg {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
 }
 
 .hero__logo {
-    width: clamp(500px, 70vw, 1800px);
-    max-width: 100%;
+  width: clamp(500px, 70vw, 1800px);
+  max-width: 100%;
 }
 
 .neon-logo {
-    display: block; // mejor que inline-block para layout
+  display: block; // mejor que inline-block para layout
 }
 
 .neon-logo svg {
-    width: 100%;
-    height: auto;   // mantiene proporción
-    display: block; // evita espacios raros
+  width: 100%;
+  height: auto; // mantiene proporción
+  display: block; // evita espacios raros
+}
+
+/* Definimos la animación de desvanecimiento (fade in) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(
+      10px
+    ); /* Opcional: le da un pequeño movimiento hacia arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Creamos la clase que aplicará la animación */
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out forwards; /* 1.2s es lo que dura. Puedes ajustarlo */
 }
