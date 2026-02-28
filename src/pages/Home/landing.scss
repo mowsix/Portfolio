@@ -1,0 +1,28 @@
+.landing__bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center; // centra vertical y horizontal
+    position: relative;
+    z-index: 1; // para que quede encima del fondo
+}
+
+.hero__logo {
+    width: clamp(580px, 90vw, 1100px); // min, ideal, max
+}
+
+.neon-logo {
+    display: block; // mejor que inline-block para layout
+}
+
+.neon-logo svg {
+    width: 100%;
+    height: auto;   // mantiene proporción
+    display: block; // evita espacios raros
+}

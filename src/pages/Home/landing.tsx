@@ -1,6 +1,8 @@
 import React from "react";
+import "./landing.scss"
 import { GridScan } from "../../components/GridScan";
 import NameLogo from "../../components/Name/NameLogo";
+
 
 //import { useNavigate } from 'react-router-dom';
 
@@ -36,8 +38,12 @@ const Landing: React.FC = () => {
       </div>
 
       <div style={{ position: "relative", zIndex: 1 }}>
-        <div className="neon-logo">
-          <NameLogo style={{ width: 520, height: "auto" }} />
+        <div className="hero">
+          <div className="hero__logo">
+            <div className="neon-logo">
+              <NameLogo />
+            </div>
+          </div>
         </div>
       </div>
     </div>
